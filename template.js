@@ -1,0 +1,1 @@
+console.log("My name is Peter. \nI have a cat called Mandu");
