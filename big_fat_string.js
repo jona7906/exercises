@@ -44,7 +44,6 @@ function readOutputChoice(){
 
     if (choice === "5"){
         let letterCount = text.length;
-        //text.replaceAll(, '*');
         text = "";
         text = text.padStart(letterCount, '*');
         console.log("text from choice 5: " + text + " letter count: " + letterCount);
@@ -52,10 +51,17 @@ function readOutputChoice(){
     }
     if (choice === "6"){
         console.log("text from choice 6: " + text)  
+        text = text.substring(0, 2).toLowerCase() + text.substring(2, 3).toUpperCase() +  text.substring(3).toLowerCase();
     }
 
     if (choice === "7"){
-        console.log("text from choice 7: " + text)   
+        console.log("text from choice 7: " + text) 
+       
+        let spaceCap = text.substring(text.indexOf(" ")+1, text.indexOf(" ")+2).toUpperCase();
+        let hyphCap = text.substring(text.indexOf("-")+1, text.indexOf("-")+2).toUpperCase();
+             
+        text = text.substring(0, text.indexOf(" ")+1) + spaceCap + text.substring(text.indexOf(" ")+2);
+        text = text.substring(0, text.indexOf("-")+1) + hyphCap + text.substring(text.indexOf("-")+2);    
     }
     
 }
