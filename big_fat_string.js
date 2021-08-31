@@ -33,15 +33,29 @@ function readOutputChoice(){
     }
 
     if (choice === "4"){
-        if(text.endsWith(".jpg")){
-            text = `true`;
-        }
-        if(text.endsWith(".png")){
+
+        if(text.endsWith(".jpg") || text.endsWith(".png")){
             text = `true`;
         }else{
             text = `false`;
         }
-      
+      console.log("text from choice 4: " + text)
+    }
+
+    if (choice === "5"){
+        let letterCount = text.length;
+        //text.replaceAll(, '*');
+        text = "";
+        text = text.padStart(letterCount, '*');
+        console.log("text from choice 5: " + text + " letter count: " + letterCount);
+     
+    }
+    if (choice === "6"){
+        console.log("text from choice 6: " + text)  
+    }
+
+    if (choice === "7"){
+        console.log("text from choice 7: " + text)   
     }
     
 }
